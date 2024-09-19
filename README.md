@@ -34,3 +34,21 @@ Linear Regression (2)
 2. Runs based on dataframe with noise points identified by DBSCAN (see above)
 3. Uses sequential feature selection for feature selection
 4. Evaluates fit of model (and compares this to the model in Linear Regression 1 above)
+
+K-means Clustering (1)
+1. Carries out K-means clustering on file (1) from pre-processing (outliers removed)
+2. Uses Elbow Visualiser to find the best number of clusters
+3. Uses K-means clustering algorithm to find clusters
+4. Explores clusters and evaluates the fit of the clusters
+
+Principle Component Analysis (PCA)
+1. Carries out principle comnponent analysis on file (1) from pre-processing (outliers removed) to reduce the number of features
+2. Uses explained variance ratio by number of components to find best number of components
+3. Performs PCA on the data
+4. Adds components to original dataframe to use in subsequent analyses
+
+K-means Clustering (2)
+1. Carries out K-means clustering on components from PCA
+2. Uses Elbow Visualiser to find the best number of clusters
+3. Uses K-means clustering algorithm to find clusters
+4. Explores clusters and evaluates the fit of the clusters
