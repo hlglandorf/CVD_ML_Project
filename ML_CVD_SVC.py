@@ -8,19 +8,16 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 from imblearn.over_sampling import SMOTE
 
-# Load in cleaned dataframe from DBSCAN clustering and ECOD cleaned
+# Load in cleaned dataframe from DBSCAN clustering
 dfa1 = pd.read_csv("df_dbscanclusters.csv")
 dfa1 = dfa1[dfa1.DB_Cluster != -1] ##remove noise points (NAs have already been removed during DBSCAN)
-dfa2 = pd.read_csv("dftnooutliers.csv") ##ECOD cleaned
 
 # Recode the cvdiahydd2 to be binary 
 dfa1['cvdiahydd2'] = dfa1['cvdiahydd2'].map({1:1, 2:0, 3:0})
-dfa2['cvdiahydd2'] = dfa2['cvdiahydd2'].map({1:1, 2:0, 3:0})
 #print(dfa2.groupby('cvdiahydd2').count())
 
 # Remove missing values in the outcome
 dfa1 = dfa1.dropna(subset=['cvdiahydd2'])
-dfa2 = dfa2.dropna(subset=['cvdiahydd2'])
 #print(dfa1['cvdiahydd2'].isna().sum())
 
 # Define X and y 
