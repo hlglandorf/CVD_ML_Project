@@ -79,3 +79,21 @@ The code files in this project are separated into the following files that are e
 1. Fits Support Vector Classifier (SVC) on file based on DBSCAN solution (outliers removed, see above)
 2. Uses SMOTE to balance the dataset
 3. Fits classifier and evaluates the solution based on classification report, cross validation, and confusion matrix
+
+(14) Neural Network to identify CVD risk cases in keras with tensorflow
+1. Fits neural network on file (1) from pre-processing (outliers removed)
+2. Uses SMOTE to balance the dataset
+3. Defines a simple and more complex model architecture (to compare)
+4. Creates earlystopping rule to avoid overfitting
+5. Compiles parameters for models
+6. Trains both models
+7. Evaluates testing performance of both models with classification report and confusion matrices as well as examines development of loss over training process to check for overfitting
+
+(15) Neural Network to identify CVD risk cases with pytorch
+1. Fits neural network on file (1) from pre-processing (outliers removed)
+2. Uses SMOTE to balance the dataset
+3. Sets up torch tensors for neural network and initiates training and testing set
+4. Defines model architecture
+5. Defines parameters for training and testing
+6. Trains the model
+7. Evaluates the model with classification report and confusion matrix
